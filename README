@@ -1,0 +1,3 @@
+apod.js grabs the latest astronomy photo of the day from nasa and dumps it into a folder
+
+weather grabs the current weather from yahoo.com
