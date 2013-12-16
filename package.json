@@ -1,0 +1,22 @@
+{
+  "name": "geektool-scripts",
+  "version": "0.0.0",
+  "description": "apod.js grabs the latest astronomy photo of the day from nasa and dumps it into a folder",
+  "main": "apod.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/rayjanwilson/geektool-scripts.git"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/rayjanwilson/geektool-scripts/issues"
+  },
+  "homepage": "https://github.com/rayjanwilson/geektool-scripts",
+  "dependencies": {
+    "jsdom": "~0.8.9"
+  }
+}
