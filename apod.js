@@ -7,7 +7,7 @@ var fs = require('fs');
 var today = new Date();
 today = today.toJSON().substring(0,10);
 
-var downloadDir = '/Users/rwilson/Pictures/apod/';
+var downloadDir = '/Users/rmwilson/Pictures/apod/';
 var downloadFile = today + '.jpg';
 
 fs.readdir(downloadDir, function(err, files){
@@ -27,16 +27,17 @@ var fetchImage = function(){
     jsdom.env({
       html: body,
       scripts: [
-      './jquery-1.7.1.min.js'
-      ]
-    }, function (err, window) {
-      var $ = window.jQuery;
+        'http://code.jquery.com/jquery.js'
+      ],
+      done: function (err, window) {
+        var $ = window.$;
 
-      // jQuery is now loaded on the jsdom window created from 'agent.body'
-      var image = $('html body center p a img').attr("src");
-      var imageUri = apodUri + image;
-      var downloadUri = downloadDir+downloadFile;
-      request(imageUri).pipe(fs.createWriteStream(downloadUri));
+        // jQuery is now loaded on the jsdom window created from 'agent.body'
+        var image = $('html body center p a img').attr("src");
+        var imageUri = apodUri + image;
+        var downloadUri = downloadDir+downloadFile;
+        request(imageUri).pipe(fs.createWriteStream(downloadUri));
+      }
 
     });
   });
