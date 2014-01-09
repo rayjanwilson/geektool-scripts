@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/rayjanwilson/geektool-scripts",
   "dependencies": {
-    "jsdom": "~0.8.9",
+    "jsdom": "~0.8.10",
     "request": "~2.30.0"
   }
 }
