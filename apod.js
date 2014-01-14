@@ -28,9 +28,7 @@ var fetchImage = function() {
 
         jsdom.env({
             html: body,
-            scripts: [
-                'http://code.jquery.com/jquery.js'
-            ],
+            scripts: ["http://code.jquery.com/jquery-2.0.3.min.js"],
             done: function(err, window) {
                 var $ = window.$;
 
